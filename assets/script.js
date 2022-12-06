@@ -41,7 +41,7 @@ $(document).ready(function () {
         // Removes previous search information
         $("#today").empty();
   
-        // Builds card info
+        // Current information card
         var title = $("<h3>").addClass("card-title").text(data.name + " (" + new Date().toLocaleDateString() + ")");
         var img = $("<img>").attr("src", "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
   
@@ -85,7 +85,7 @@ $(document).ready(function () {
       });
     }
     
-    // Adds forecast cards to page
+    // Adds forecast cards below current weather card
     function weatherForecast(searchTerm) {
       $.ajax({
         type: "GET",
